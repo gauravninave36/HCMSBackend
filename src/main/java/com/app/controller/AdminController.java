@@ -26,7 +26,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping("/admin")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://health-club-management.herokuapp.com")
 @Slf4j
 public class AdminController {
 	@Autowired

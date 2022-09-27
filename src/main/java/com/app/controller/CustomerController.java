@@ -26,7 +26,7 @@ import com.app.service.ICustomerService;
 
 @RestController
 @RequestMapping("/api/customer")
-@CrossOrigin(origins="http://localhost:3000")
+@CrossOrigin(origins="https://health-club-management.herokuapp.com")
 public class CustomerController {
 	@Autowired
 	private ICustomerService custService;
