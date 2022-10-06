@@ -37,4 +37,16 @@ public List<Long> customerInPlanCount(){
 	String jpql = "select count(c.planId.planName) from CustomerEntity c group by c.planId.id order by c.planId.id";
 	return mgr.createQuery(jpql, Long.class).getResultList();
 }
+public List<CustomerEntity> customCustomer(long l,long m){
+	String jpql="select c from CustomerEntity c where c.planId.id=:pid and c.clubId.id=:cid";
+	return mgr.createQuery(jpql, CustomerEntity.class).setParameter("pid",m).setParameter("cid", l).getResultList();
+}
+public List<CustomerEntity> customCustomerClub(long cid){
+	String jpql="select c from CustomerEntity c where c.clubId.id=:cid";
+	return mgr.createQuery(jpql, CustomerEntity.class).setParameter("cid",cid).getResultList();
+}
+public List<CustomerEntity> customCustomerPlan(long pid){
+	String jpql="select c from CustomerEntity c where c.planId.id=:pid";
+	return mgr.createQuery(jpql, CustomerEntity.class).setParameter("pid",pid).getResultList();
+}
 }

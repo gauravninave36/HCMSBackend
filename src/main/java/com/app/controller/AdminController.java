@@ -200,4 +200,22 @@ public class AdminController {
 		}
 		
 	}
+	@PostMapping("/getCustomerbyPidCid")
+	public ResponseEntity<?> getCustomerbyPidCid(@RequestBody AdminPidCidCustDto cust){
+		System.out.println(cust);
+		try {
+			return ResponseEntity.status(HttpStatus.CREATED).body(adminImpl.customCustomerdetails(cust.getCid(),cust.getPid()));
+		}catch(Exception e) {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ApiResponse(e.getMessage()));
+		}
+	}
+	
+	@GetMapping("/getAllPlan")
+	public ResponseEntity<?> getAllPlan(){
+		try {
+			return ResponseEntity.status(HttpStatus.CREATED).body(adminImpl.getAllplan());
+		}catch(Exception e) {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ApiResponse(e.getMessage()));
+		}
+	}
 }

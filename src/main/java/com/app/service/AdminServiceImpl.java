@@ -171,7 +171,26 @@ public class AdminServiceImpl implements IAdminService {
 		
 	}
 
+	@Override
+	public List<CustomerEntity> customCustomerdetails(long l, long m) {
+		// TODO Auto-generated method stub
+		List<CustomerEntity> a;
+		if(l==0 && m==0) {
+		 a = adminCust.findAll();
+		}else if(l==0 && m>0) {
+			a = adminEntity.customCustomerPlan(m);
+		}else if(l>0 && m==0) {
+			 a = adminEntity.customCustomerClub(l);
+		}else {
+		a = adminEntity.customCustomer(l, m);
+		}
+		return a;
+	}
 
+	public List<PlanEntity> getAllplan(){
+		List<PlanEntity> plans = adminplan.findAll();
+		return plans;
+	}
 		
 	
 }

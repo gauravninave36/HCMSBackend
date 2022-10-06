@@ -37,4 +37,8 @@ public interface IAdminService {
 	ClubEntity clubByid(Long id);
 	//Delclubbyid
 	String deleteClubbyid(Long id);
+	//getallplans
+	List<PlanEntity> getAllplan();
+	//GetcustomerbypidandCid
+	List<CustomerEntity> customCustomerdetails(long cid,long pid);
 }
