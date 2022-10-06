@@ -9,6 +9,7 @@ import com.app.dto.summarydto;
 import com.app.entity.ClubEntity;
 import com.app.entity.CustomerEntity;
 import com.app.entity.EmployeeEntity;
+import com.app.entity.PlanEntity;
 
 public interface IAdminService {
 	//authentication method 
