@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.app.custom_exception.ResourceNotFoundException;
 import com.app.dao.AdminCustomerRepository;
 import com.app.dao.AdminEntityRepository;
+import com.app.dao.AdminPlanRepository;
 import com.app.dao.AdminRepository;
 import com.app.dao.adminClub;
 import com.app.dto.AdminPlanCustomerSummary;
