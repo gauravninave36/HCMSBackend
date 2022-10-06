@@ -19,6 +19,7 @@ import com.app.dto.summarydto;
 import com.app.entity.ClubEntity;
 import com.app.entity.CustomerEntity;
 import com.app.entity.EmployeeEntity;
+import com.app.entity.PlanEntity;
 import com.app.entity.RoleEnum;
 
 @Service
@@ -36,6 +37,9 @@ public class AdminServiceImpl implements IAdminService {
 	
 	@Autowired
 	private AdminEntityRepository adminEntity;
+
+	@Autowired
+	private AdminPlanRepository adminplan;
 	
 	//Admin signin authetication logic
 	@Override
